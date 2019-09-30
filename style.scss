@@ -13,10 +13,7 @@ $color-background: rgb(210, 193, 167);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -25,12 +22,12 @@ h1 {
     align-self: center;
     margin-right: 30px;
 
-    @include for-phone {
-        font-size: 23px;
-    }
-
     @include for-tablet {
         font-size: 40px;
+    }
+
+    @include for-phone {
+        font-size: 10px;
     }
 }
 
@@ -40,13 +37,13 @@ h2 {
     text-transform: uppercase;
     text-align: center;
 
-    @include for-phone {
-        font-size: 40px;
-    }
-
     @include for-tablet {
-        font-size: 40px;
-    }    
+        font-size: 20px;
+    } 
+    
+    @include for-phone {
+        font-size: 20px;
+    }
 }
 
 a {
@@ -87,6 +84,10 @@ header {
     & ul {
         width: 100%;
         justify-content: flex-end;
+
+    @include for-phone {
+        flex-direction: column;
+    } 
         
         & li {
             padding: 10px;
@@ -106,24 +107,35 @@ main {
     width: 100%;
 
     p {
-        font-family: Helvetica, Arial, sans-serif;
         font-size: 14px;
         padding: 10px;
     }
 
     #produktlista {
+        li {
+            flex-direction: column;
+        }
 
         .produktbild {
-            display: inline-flex;
-            flex-wrap: wrap;
-            max-width: calc(80vw / 3);
+            width:100%;
         }
     }
 
-    @include for-phone {
+    #recept {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
         li {
             display: flex;
-            max-width: 100%;
+            flex-direction: column;
+            &:nth-child(2) {
+                margin-left: 20px;
+            }
+            a {
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+            }
         }
     }
 
@@ -135,7 +147,6 @@ main {
 
 #sidebar {
     background: rgb(146, 133, 115);
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 10pt;
     color: white;
     flex-direction: column;
@@ -167,7 +178,6 @@ main {
 }
 
 footer {
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     font-size: 8pt;
     text-align: center;
