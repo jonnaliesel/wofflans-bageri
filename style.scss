@@ -1,47 +1,6 @@
 $color-menu: rgb(210, 193, 167);
 $color-background: rgb(210, 193, 167);
 
-@mixin flexbox {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-/* @mixin flex-direction($value: row) {
-	@if $value == column {
-		-webkit-box-direction: normal;
-		-webkit-box-orient: vertical;
-	} @else {
-		-webkit-box-direction: normal;
-		-webkit-box-orient: horizontal;
-	}
-	-webkit-flex-direction: $value;
-	-moz-flex-direction: $value;
-	-ms-flex-direction: $value;
-    flex-direction: $value;
-}
-
-@mixin justify-content($value: flex-start) {
-	@if $value == flex-start {
-		-webkit-box-pack: start;
-		-ms-flex-pack: start;
-	} @else if $value == flex-end {
-		-webkit-box-pack: end;
-		-ms-flex-pack: end;
-	} @else if $value == space-between {
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;		
-	} @else {
-		-webkit-box-pack: $value;
-		-ms-flex-pack: $value;
-	}
-	-webkit-justify-content: $value;
-	-moz-justify-content: $value;
-    justify-content: $value;
-}
-*/
 @mixin for-phone {
     @media (max-width: 425px) { @content; }
 }
@@ -87,16 +46,16 @@ header {
 }
 
 .navbar {
-    @include flexbox;
-    background-color: $color-background;
+    display: flex;
     position: sticky;
+    background-color: $color-background;
     top: 0;
 
     & ul {
         width: 100%;
-        @include flexbox;
-        justify-content: flex-end;
-
+        display: flex;
+        justify-content: flex-end
+        
         & li {
             padding: 10px;
         }
