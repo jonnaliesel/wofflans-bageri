@@ -1,12 +1,16 @@
 $color-menu:rgb(210, 193, 167);
 $color-background: rgb(210, 193, 167);
 
-@mixin for-phone {
-    @media (max-width: 425px) { @content; }
+@mixin for-phone() {
+    @media screen and (max-width: 425px) { 
+        @content; 
+    }
 }
 
-@mixin for-tablet {
-    @media (min-width: 426px), (max-width: 768px) { @content; }
+@mixin for-tablet() {
+    @media screen and (min-width: 426px) and (max-width: 768px) { 
+        @content; 
+    }
 }
 
 * {
@@ -23,12 +27,12 @@ h1 {
     align-self: center;
     margin-right: 30px;
 
-    @include for-tablet {
+    @include for-tablet() {
         font-size: 40px;
     }
 
-    @include for-phone {
-        font-size: 10px;
+    @include for-phone() {
+        font-size: 19px;
     }
 }
 
@@ -38,11 +42,11 @@ h2 {
     text-transform: uppercase;
     text-align: center;
 
-    @include for-tablet {
+    @include for-tablet() {
         font-size: 20px;
     } 
     
-    @include for-phone {
+    @include for-phone() {
         font-size: 20px;
     }
 }
@@ -66,11 +70,6 @@ li {
     text-align: center;
 }
 
-#logo {
-    width: 145px;
-    margin-right: 20px;
-}
-
 header {
     background: $color-menu;
     padding: 15px;
@@ -78,6 +77,12 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-content: center;
+}
+
+#logo {
+    width: 170px;
+    margin-right: 20px;
 }
 
 .navbar {
@@ -86,17 +91,27 @@ header {
     background-color: $color-background;
     top: 0;
 
-    & ul {
+    ul {
         width: 100%;
         justify-content: flex-end;
 
-    @include for-phone {
-        flex-direction: column;
-    } 
+         @include for-phone() {
+            flex-direction: column;
+         }
         
-        & li {
+        li {
             padding: 10px;
         }
+    }
+}
+
+.navbar a {
+    @include for-phone() {
+        background-color: darken($color-menu, 15);
+        display: block;
+        line-height: 30px;
+        border: solid black 1px;
+        border-radius: 5px;
     }
 }
 
@@ -104,7 +119,7 @@ main {
     padding: 10px 0;
     display: flex;
 
-    @include for-phone {
+    @include for-phone() {
         flex-wrap: wrap-reverse;
     }
 }
@@ -119,9 +134,10 @@ main {
     p {
         font-size: 14px;
         padding: 10px;
+        text-align: center;
     }
 
-    #produktlista {
+    ul#produktlista {
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
@@ -129,15 +145,19 @@ main {
         li {
             flex-direction: column;
             min-width: 50px;
+        }
+    }
 
-            .produktbild {
-                width: 300px;
-                margin: 10px;
+    .produktbild {
+        width: 300px;
+        margin: 10px;
 
-                @include for-tablet {
-                    width: 200px;
-                }
-            }
+        @include for-tablet() {
+            width: 200px;
+        }
+
+        @include for-phone() {
+            width: 200px;
         }
     }
 
@@ -159,7 +179,7 @@ main {
         }
     }
 
-    @include for-phone {
+    @include for-phone() {
         margin: 0;
         padding: 5px;
     }
@@ -176,7 +196,7 @@ main {
     padding: 12px;
     min-width: 175px;
 
-    @include for-phone {
+    @include for-phone() {
         width: 100%;
         max-width: 100%;
         margin: 10px 0;
@@ -202,7 +222,7 @@ footer {
     font-size: 8pt;
     text-align: center;
 
-    & > div {
+    div {
         margin-top: 8px;
     }
 }

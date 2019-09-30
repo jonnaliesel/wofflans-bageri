@@ -17,15 +17,15 @@ h1 {
   margin-right: 30px;
 }
 
-@media (min-width: 426px), (max-width: 768px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
   h1 {
     font-size: 40px;
   }
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
   h1 {
-    font-size: 10px;
+    font-size: 19px;
   }
 }
 
@@ -36,13 +36,13 @@ h2 {
   text-align: center;
 }
 
-@media (min-width: 426px), (max-width: 768px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
   h2 {
     font-size: 20px;
   }
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
   h2 {
     font-size: 20px;
   }
@@ -69,11 +69,6 @@ li {
   text-align: center;
 }
 
-#logo {
-  width: 145px;
-  margin-right: 20px;
-}
-
 header {
   background: #d2c1a7;
   padding: 15px;
@@ -85,6 +80,13 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#logo {
+  width: 170px;
+  margin-right: 20px;
 }
 
 .navbar {
@@ -104,7 +106,7 @@ header {
           justify-content: flex-end;
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .navbar ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -117,6 +119,16 @@ header {
   padding: 10px;
 }
 
+@media screen and (max-width: 425px) {
+  .navbar a {
+    background-color: #b89d74;
+    display: block;
+    line-height: 30px;
+    border: solid black 1px;
+    border-radius: 5px;
+  }
+}
+
 main {
   padding: 10px 0;
   display: -webkit-box;
@@ -124,7 +136,7 @@ main {
   display: flex;
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
   main {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
@@ -143,9 +155,10 @@ main {
 .content p {
   font-size: 14px;
   padding: 10px;
+  text-align: center;
 }
 
-.content #produktlista {
+.content ul#produktlista {
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -154,7 +167,7 @@ main {
           justify-content: center;
 }
 
-.content #produktlista li {
+.content ul#produktlista li {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -162,13 +175,19 @@ main {
   min-width: 50px;
 }
 
-.content #produktlista li .produktbild {
+.content .produktbild {
   width: 300px;
   margin: 10px;
 }
 
-@media (min-width: 426px), (max-width: 768px) {
-  .content #produktlista li .produktbild {
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .content .produktbild {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content .produktbild {
     width: 200px;
   }
 }
@@ -205,7 +224,7 @@ main {
   width: 100%;
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
   .content {
     margin: 0;
     padding: 5px;
@@ -230,7 +249,7 @@ main {
   min-width: 175px;
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
   #sidebar {
     width: 100%;
     max-width: 100%;
@@ -262,7 +281,7 @@ footer {
   text-align: center;
 }
 
-footer > div {
+footer div {
   margin-top: 8px;
 }
 /*# sourceMappingURL=style.css.map */
