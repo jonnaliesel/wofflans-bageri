@@ -1,0 +1,231 @@
+$color-menu: rgb(210, 193, 167);
+$color-background: rgb(210, 193, 167);
+
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+/* @mixin flex-direction($value: row) {
+	@if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+    flex-direction: $value;
+}
+
+@mixin justify-content($value: flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;		
+	} @else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+    justify-content: $value;
+}
+*/
+@mixin for-phone {
+    @media (max-width: 425px) { @content; }
+}
+
+@mixin for-tablet {
+    @media (min-width: 426px), (max-width: 768px) { @content; }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+}
+
+.info {
+    margin-bottom: 10px;
+
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+}
+
+#logo {
+    width: 145px;
+    margin-right: 20px;
+}
+
+header {
+    background: $color-menu;
+    padding: 15px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    @include flexbox;
+    background-color: $color-background;
+    position: sticky;
+    top: 0;
+
+    & ul {
+        width: 100%;
+        @include flexbox;
+        justify-content: flex-end;
+
+        & li {
+            padding: 10px;
+        }
+    }
+    .no-bull {
+        list-style-type: none;
+    }
+}
+
+.navbar > ul > li > a {
+    text-decoration: none;
+    color: black;
+    
+    &:hover {
+        text-decoration: underline;
+        color: white;
+    }
+    
+    &:active {
+        text-decoration: none;
+        color:white;
+        font-weight: 700;
+    }
+}
+
+main {
+    padding: 10px 0;
+    display: flex;
+}
+
+h1 {
+    font-family:'Amatic SC', cursive;
+    font-size: 50px;
+    align-self: center;
+    margin-right: 30px;
+
+    @include for-phone {
+        font-size: 23px;
+    }
+
+    @include for-tablet {
+        font-size: 40px;
+    }
+}
+
+h2 {
+    font-family: 'Staatliches', monospace;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include for-phone {
+        font-size: 40px;
+    }
+
+    @include for-tablet {
+        font-size: 40px;
+    }    
+}
+
+.content {
+    order: 2;
+    background: rgb(204, 204, 204);
+    margin-left: 10px;
+    padding: 10px;
+    width: 100%;
+
+    p {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #produktlista {
+        display: flex;
+        .produktbild {
+            display: inline-flex;
+            max-width: calc(80vw / 3);
+        }
+    }
+
+    @include for-phone {
+        #produktlista {
+            li {
+                display: flex;
+                max-width: 100%;
+            }
+        }
+    }
+
+    @include for-phone {
+        margin: 0;
+        padding: 5px;
+    }
+}
+
+#sidebar {
+    background: rgb(146, 133, 115);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    order: 1;
+    max-width: 187px;
+    min-width: 167px;
+    border: 1px solid black;
+    padding: 8px;
+
+    @include for-phone {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+#info-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 8pt;
+    text-align: center;
+
+    & > div {
+        margin-top: 8px;
+    }
+}

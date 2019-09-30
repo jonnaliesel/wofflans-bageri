@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Staatliches&display=swap');
+    </style>
+    <title>Wofflans stenugnsbageri</title>
+</head>
+
+<body>
+<header role="banner" aria-label="header">
+    <img id="logo" src="./assets/img/logo.svg" alt="wofflans stenugnsbageri" />
+    <h1>Välkommen till Vegas hjärta!</h1>
+</header>   
+
+<nav class="navbar" role="navigation">
+    <ul class="no-bull">
+        <li><a href="#sidebar" aria-label="snabbinfo">Snabbinfo</a></li>
+        <li><a href="#footer" aria-label="kontakt">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <aside id="sidebar" role="complementary">
+            <div id="info-icon">
+                <img src="./assets/img/icon.png" alt="info-icon" />
+            </div>
+            <p class="info"><strong>Wofflans stenugnsbageri</strong> <br />
+                Startades 2018 av familjen Fleischanderl
+            </p>
+            <p class="info"><strong>Pappa Wofflan</strong> <br />
+                Är bagaren i familjen och hans 
+                största passion är stenugnsbakat surdegsbröd.
+            </p>
+            <p class="info"><strong>Mamma Cattis</strong> <br />
+                Driver familjens första enhet <em>Söderbergs Bageri</em> 
+                i Telefonplan. Ett gammalt bageri med anor från 1939, vill du göra
+                en nostalgisk tidsresa och hitta klassiska svenska bakverk
+                rekommenderar jag dig att åka dit. 
+            </p>
+            <p class="info"><strong>Dottern Jonna</strong> <br />
+                Är baristan i familjen och tar hand om den kromade 
+                espressomaskinen som sin lilla bebis.
+            </p>
+            <p class="info"><strong>Sonen Felix</strong> <br />
+                Driver familjens senaste enhet <em>STHLM Bread Truck</em> 
+                som åker runt i Stockholms söderförorter och säljer bröd och fika. 
+            </p>
+
+            <video width="100%" controls aria-label="bagaren penslar hamburgerbröd med smält smör">
+                <source src="video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+    </aside>
+    <section class="content">
+        <article role="article">
+            <h2>Wofflans stenugnsbageri</h2>
+
+            <p>Det lilla familjedrivna stenugnsbageriet i den nya stadsdelen Vega</p>
+            
+            <button 
+            class="button" type="button" 
+            role="button" aria-label="gå till våra brödsorter">
+            Våra brödsorter
+            </button>
+        </article>
+
+        <ul class="no-bull" id="produktlista" role="list" aria-label="sortimentslista">
+            <li>
+                <h3>Bröd</h3>
+                <img class="produktbild" src="./assets/img/valnotsbrod.jpg" alt="stenugnsbakat bröd" />
+            </li>
+                
+            <li>
+                <h3>Fika</h3>
+                <img class="produktbild" src="./assets/img/nottoska.jpg" alt="hembakat fika" />
+            </li>
+            <li>
+                <h3>Smörgåsar</h3>
+                <img class="produktbild" src="./assets/img/smorgas.jpg" alt="smörgåsar med olika pålägg" />
+            </li>
+        </ul>
+        
+        <ul class="no-bull" id="recept">
+            <li>
+                <h2>Det hemliga receptet <br />
+                    till våra magiska <br />
+                    chokladbollar:</h2>
+            </li>
+            <li>
+                <iframe src="./assets/chokladbollar.pdf" width=”100%” height=”100%”>
+                    This browser does not support PDFs. Please download the PDF to view it: Download PDF
+                </iframe>
+                <a 
+                href="./assets/chokladbollar.pdf" download="Wofflans chokladbollar" 
+                aria-label="ladda ner vårt recept på chokladbollar som pdf">
+                Ladda ner receptet
+                </a>
+            </li>
+        </ul>   
+
+    </section>
+</main> 
+
+<footer id="footer" role="contentinfo">
+    <p>© Wofflans stenugnsbageri | Vega allé 152, 136 48 Handen</p>
+    <p>info@wofflansbageri.se | 08 31 05 05</p>
+    <div>Icons made by 
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+        Freepik</a> from 
+        <a href="https://www.flaticon.com/" title="Flaticon">
+        www.flaticon.com</a></div>
+</footer>
+
+</body>
+</html>
