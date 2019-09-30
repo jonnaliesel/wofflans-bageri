@@ -66,14 +66,6 @@ ul {
   display: flex;
 }
 
-.info {
-  margin-bottom: 10px;
-}
-
-.info:nth-last-child(1) {
-  margin-bottom: 0;
-}
-
 #logo {
   width: 145px;
   margin-right: 20px;
@@ -137,11 +129,13 @@ main {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: calc(80vw / 3);
 }
 
 @media (max-width: 425px) {
-  .content #produktlista li {
+  .content li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -180,6 +174,14 @@ main {
     max-width: 100%;
     margin: 10px 0;
   }
+}
+
+.info {
+  margin-bottom: 10px;
+}
+
+.info:nth-last-child(1) {
+  margin-bottom: 0;
 }
 
 #info-icon {

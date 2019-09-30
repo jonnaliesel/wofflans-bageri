@@ -64,14 +64,6 @@ ul {
     display: flex;
 }
 
-.info {
-    margin-bottom: 10px;
-
-    &:nth-last-child(1) {
-        margin-bottom: 0;
-    }
-}
-
 #logo {
     width: 145px;
     margin-right: 20px;
@@ -123,16 +115,15 @@ main {
 
         .produktbild {
             display: inline-flex;
+            flex-wrap: wrap;
             max-width: calc(80vw / 3);
         }
     }
 
     @include for-phone {
-        #produktlista {
-            li {
-                display: flex;
-                max-width: 100%;
-            }
+        li {
+            display: flex;
+            max-width: 100%;
         }
     }
 
@@ -158,6 +149,14 @@ main {
         width: 100%;
         max-width: 100%;
         margin: 10px 0;
+    }
+}
+
+.info {
+    margin-bottom: 10px;
+
+    &:nth-last-child(1) {
+        margin-bottom: 0;
     }
 }
 
