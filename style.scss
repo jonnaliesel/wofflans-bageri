@@ -1,4 +1,4 @@
-$color-menu: rgb(210, 193, 167);
+$color-menu:rgb(210, 193, 167);
 $color-background: rgb(210, 193, 167);
 
 @mixin for-phone {
@@ -15,72 +15,8 @@ $color-background: rgb(210, 193, 167);
     box-sizing: border-box;
 }
 
-ul {
-    list-style-type: none;
-}
-
 body {
     font-family: 'Helvetica', sans-serif;
-}
-
-.info {
-    margin-bottom: 10px;
-
-    &:nth-last-child(1) {
-        margin-bottom: 0;
-    }
-}
-
-#logo {
-    width: 145px;
-    margin-right: 20px;
-}
-
-header {
-    background: $color-menu;
-    padding: 15px;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navbar {
-    display: flex;
-    position: sticky;
-    background-color: $color-background;
-    top: 0;
-
-    & ul {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end
-        
-        & li {
-            padding: 10px;
-        }
-    }
-}
-
-.navbar > ul > li > a {
-    text-decoration: none;
-    color: black;
-    
-    &:hover {
-        text-decoration: underline;
-        color: white;
-    }
-    
-    &:active {
-        text-decoration: none;
-        color:white;
-        font-weight: 700;
-    }
-}
-
-main {
-    padding: 10px 0;
-    display: flex;
 }
 
 h1 {
@@ -113,8 +49,65 @@ h2 {
     }    
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    
+    &:hover {
+        text-decoration: underline;
+        color: white;
+    }
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.info {
+    margin-bottom: 10px;
+
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+}
+
+#logo {
+    width: 145px;
+    margin-right: 20px;
+}
+
+header {
+    background: $color-menu;
+    padding: 15px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    background-color: $color-background;
+    top: 0;
+
+    & ul {
+        width: 100%;
+        justify-content: flex-end;
+        
+        & li {
+            padding: 10px;
+        }
+    }
+}
+
+main {
+    padding: 10px 0;
+    display: flex;
+}
+
 .content {
-    order: 2;
     background: rgb(204, 204, 204);
     margin-left: 10px;
     padding: 10px;
@@ -127,7 +120,7 @@ h2 {
     }
 
     #produktlista {
-        display: flex;
+
         .produktbild {
             display: inline-flex;
             max-width: calc(80vw / 3);
@@ -156,7 +149,6 @@ h2 {
     color: white;
     flex-direction: column;
     justify-content: flex-start;
-    order: 1;
     max-width: 187px;
     min-width: 167px;
     border: 1px solid black;
