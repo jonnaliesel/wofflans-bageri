@@ -60,10 +60,6 @@ header {
   justify-content-padding: 10px;
 }
 
-.navbar .no-bull {
-  list-style-type: none;
-}
-
 .navbar > ul > li > a {
   text-decoration: none;
   color: black;
