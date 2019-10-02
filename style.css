@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -31,9 +33,10 @@ h1 {
 
 h2 {
   font-family: 'Staatliches', monospace;
-  font-size: 50px;
+  font-size: 40px;
   text-transform: uppercase;
   text-align: center;
+  padding: 20px;
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -44,7 +47,7 @@ h2 {
 
 @media screen and (max-width: 425px) {
   h2 {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
@@ -69,6 +72,7 @@ li {
   text-align: center;
 }
 
+/* BANNER */
 header {
   background: #d2c1a7;
   padding: 15px;
@@ -89,14 +93,22 @@ header {
   margin-right: 20px;
 }
 
+/* TOPPMENY */
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 1;
   background-color: #d2c1a7;
   top: 0;
+}
+
+@media screen and (max-width: 425px) {
+  .navbar {
+    position: relative;
+  }
 }
 
 .navbar ul {
@@ -143,6 +155,7 @@ main {
   }
 }
 
+/* HUVUDINNEHÅLL */
 .content {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -150,6 +163,13 @@ main {
   margin-left: 10px;
   padding: 10px;
   width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .content {
+    margin: 0;
+    padding: 5px;
+  }
 }
 
 .content p {
@@ -192,19 +212,9 @@ main {
   }
 }
 
-.content #recept {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.content #recept li {
+/* RECEPT PÅ CHOKLADBOLLAR */
+#recept {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,22 +222,28 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  height: 165px;
 }
 
-.content #recept li:nth-child(2) {
-  margin-left: 20px;
-}
-
-.content #recept li a {
+#recept a {
   text-align: center;
-  padding: 10px;
-  width: 100%;
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  embed {
+    width: 200px;
+  }
 }
 
 @media screen and (max-width: 425px) {
-  .content {
-    margin: 0;
-    padding: 5px;
+  embed {
+    width: 100%;
+    zoom: 0.5;
   }
 }
 
