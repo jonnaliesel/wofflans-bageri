@@ -18,7 +18,7 @@
 </header>   
 
 <nav class="navbar" role="navigation">
-    <ul class="no-bull">
+    <ul>
         <li><a href="#sidebar" aria-label="snabbinfo">Snabbinfo</a></li>
         <li><a href="#footer" aria-label="kontakt">Kontakt</a></li>
     </ul>
@@ -57,6 +57,7 @@
             </video>
 
     </aside>
+
     <section class="content">
         <article role="article">
             <h2>Wofflans stenugnsbageri</h2>
@@ -70,7 +71,7 @@
             </button>
         </article>
 
-        <ul class="no-bull" id="produktlista" role="list" aria-label="sortimentslista">
+        <ul id="produktlista" role="list" aria-label="sortimentslista">
             <li>
                 <h3>Bröd</h3>
                 <img class="produktbild" src="./assets/img/valnotsbrod.jpg" alt="stenugnsbakat bröd" />
@@ -86,23 +87,21 @@
             </li>
         </ul>
         
-        <ul class="no-bull" id="recept">
-            <li>
-                <h2>Det hemliga receptet <br />
-                    till våra magiska <br />
-                    chokladbollar:</h2>
-            </li>
-            <li>
-                <iframe src="./assets/chokladbollar.pdf" width=”100%” height=”100%”>
-                    This browser does not support PDFs. Please download the PDF to view it: Download PDF
-                </iframe>
-                <a 
+        <h2>
+            Det hemliga receptet<br />
+            till våra magiska<br />
+            chokladbollar:
+        </h2>
+
+        <section id="recept">
+            <embed src="./assets/chokladbollar.pdf" />
+        
+            <a 
                 href="./assets/chokladbollar.pdf" download="Wofflans chokladbollar" 
                 aria-label="ladda ner vårt recept på chokladbollar som pdf">
                 Ladda ner receptet
-                </a>
-            </li>
-        </ul>   
+            </a>
+        </section>
 
     </section>
 </main> 
