@@ -186,19 +186,33 @@ main {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    height: 165px;
+
+    @include for-phone() {
+        width: 100%;
+    }
+
     a {
         text-align: center;
+        padding: 20px;
+        @include for-phone() {
+            background-color: #b89d74;
+            display: block;
+            line-height: 30px;
+            border: solid black 1px;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 5px;
+        }
     }
 }
 
 embed {
+    width: 500px;
     @include for-tablet() {
         width: 200px;
     }
     @include for-phone() {
         width: 100%;
-        zoom: 0.5;
     }
 }
 

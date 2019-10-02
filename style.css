@@ -227,11 +227,33 @@ main {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  height: 165px;
+}
+
+@media screen and (max-width: 425px) {
+  #recept {
+    width: 100%;
+  }
 }
 
 #recept a {
   text-align: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 425px) {
+  #recept a {
+    background-color: #b89d74;
+    display: block;
+    line-height: 30px;
+    border: solid black 1px;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 5px;
+  }
+}
+
+embed {
+  width: 500px;
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -243,7 +265,6 @@ main {
 @media screen and (max-width: 425px) {
   embed {
     width: 100%;
-    zoom: 0.5;
   }
 }
 
