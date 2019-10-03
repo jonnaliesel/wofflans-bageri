@@ -18,24 +18,62 @@ body {
   background-size: cover;
 }
 
+@media screen and (min-width: 670px) and (max-width: 768px) {
+  body {
+    background-position: right;
+  }
+}
+
+main {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 670px) and (max-width: 768px) {
+  main {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 669px) {
+  main {
+    width: 80%;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    width: 100%;
+    margin: 0;
+  }
+}
+
 h1 {
   font-family: "Amatic SC", cursive;
   font-size: 50px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 670px) and (max-width: 768px) {
   h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 
 @media screen and (max-width: 425px) {
   h1 {
-    font-size: 19px;
+    font-size: 30px;
   }
 }
 
@@ -47,15 +85,21 @@ h2 {
   padding: 20px;
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 670px) and (max-width: 768px) {
   h2 {
-    font-size: 20px;
+    font-size: 38px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 669px) {
+  h2 {
+    font-size: 48px;
   }
 }
 
 @media screen and (max-width: 425px) {
   h2 {
-    font-size: 25px;
+    font-size: 35px;
   }
 }
 
@@ -100,6 +144,13 @@ header {
   width: 250px;
 }
 
+@media screen and (max-width: 425px) {
+  #logo {
+    margin-right: 30px;
+    width: 150px;
+  }
+}
+
 /* TOPPMENY */
 .navbar {
   display: -webkit-box;
@@ -108,7 +159,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   z-index: 1;
-  padding: 20px;
+  padding: 15px;
   background-color: #d2c1a7;
   top: 0;
 }
@@ -141,27 +192,12 @@ header {
 
 @media screen and (max-width: 425px) {
   .navbar a {
-    background-color: #b89d74;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
     display: block;
     line-height: 30px;
     border: solid black 1px;
     border-radius: 5px;
-  }
-}
-
-main {
-  padding: 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 75%;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 425px) {
-  main {
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
   }
 }
 
@@ -175,6 +211,18 @@ main {
   width: 100%;
 }
 
+@media screen and (min-width: 670px) and (max-width: 768px) {
+  .content {
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 669px) {
+  .content {
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .content {
     margin: 0;
@@ -183,7 +231,8 @@ main {
 }
 
 .content p {
-  font-size: 18px;
+  font-size: 28px;
+  font-family: "Shadows Into Light", cursive;
   padding: 10px;
   text-align: center;
 }
@@ -191,7 +240,7 @@ main {
 .content ul#produktlista {
   margin-top: 30px;
   background-color: #fff;
-  padding: 20px 20px 40px 20px;
+  padding: 20px 20px 30px 20px;
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -218,7 +267,7 @@ main {
   margin: 10px;
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 670px) and (max-width: 768px) {
   .content .produktbild {
     width: 200px;
   }
@@ -260,23 +309,23 @@ main {
 
 @media screen and (max-width: 425px) {
   #recept a {
-    background-color: #b89d74;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
     display: block;
     line-height: 30px;
     border: solid black 1px;
     border-radius: 5px;
-    margin-top: 20px;
-    padding: 5px;
+    margin: 15px 0;
   }
 }
 
 embed {
-  width: 500px;
+  width: 374px;
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 670px) and (max-width: 768px) {
   embed {
-    width: 200px;
+    width: 375px;
   }
 }
 
@@ -301,7 +350,7 @@ embed {
       flex-shrink: 3;
   border: 1px solid black;
   padding: 20px;
-  min-width: 175px;
+  min-width: 165px;
 }
 
 @media screen and (max-width: 425px) {

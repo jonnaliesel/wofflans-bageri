@@ -2,18 +2,24 @@ $color-menu:rgb(210, 193, 167);
 $color-base: #fff;
 $color-background: rgb(210, 193, 167);
 $color-sidebar: #000;
-$text-handwritten: 'Amatic SC', cursive;
+$text-handwritten-title: 'Amatic SC', cursive;
+$text-handwritten-paragraph: 'Shadows Into Light', cursive;
 $text-boxy: 'Staatliches', monospace;
 
-
-@mixin for-phone() {
-    @media screen and (max-width: 425px) { 
+@mixin for-tablet() {
+    @media screen and (min-width: 670px) and (max-width: 768px) { 
         @content; 
     }
 }
 
-@mixin for-tablet() {
-    @media screen and (min-width: 426px) and (max-width: 768px) { 
+@mixin for-small-tablet() {
+    @media screen and (min-width: 426px) and (max-width: 669px) { 
+        @content; 
+    }
+}
+
+@mixin for-phone() {
+    @media screen and (max-width: 425px) { 
         @content; 
     }
 }
@@ -34,20 +40,46 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-h1 {
-    font-family: $text-handwritten;
-    font-size: 50px;
-    align-self: center;
-    margin-right: 30px;
 
     @include for-tablet() {
-        font-size: 40px;
+        background-position: right;
+    }
+}
+
+main {
+    padding: 10px 0;
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+
+    @include for-tablet() {
+        width: 85%;
+    }
+
+    @include for-small-tablet() {
+        width: 80%;
+        flex-wrap: wrap-reverse;
     }
 
     @include for-phone() {
-        font-size: 19px;
+        flex-wrap: wrap-reverse;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+h1 {
+    font-family: $text-handwritten-title;
+    font-size: 50px;
+    align-self: center;
+    margin-left: 30px;
+
+    @include for-tablet() {
+        font-size: 50px;
+    }
+
+    @include for-phone() {
+        font-size: 30px;
     }
 }
 
@@ -59,11 +91,15 @@ h2 {
     padding: 20px;
 
     @include for-tablet() {
-        font-size: 20px;
+        font-size: 38px;
     } 
+
+    @include for-small-tablet() {
+        font-size: 48px;
+    }
     
     @include for-phone() {
-        font-size: 25px;
+        font-size: 35px;
     }
 }
 
@@ -99,6 +135,10 @@ header {
 
 #logo {
     width: 250px;
+    @include for-phone() {
+        margin-right: 30px;
+        width: 150px;
+    }
 }
 
 /* TOPPMENY */
@@ -106,7 +146,7 @@ header {
     display: flex;
     position: sticky;
     z-index: 1;
-    padding: 20px;
+    padding: 15px;
     background-color: $color-background;
     top: 0;
 
@@ -130,22 +170,12 @@ header {
 
 .navbar a {
     @include for-phone() {
-        background-color: darken($color-menu, 15);
+        background-color: rgba($color-base, 0.7);
+        font-size: 22px;
         display: block;
         line-height: 30px;
         border: solid black 1px;
         border-radius: 5px;
-    }
-}
-
-main {
-    padding: 10px 0;
-    display: flex;
-    width: 75%;
-    margin: 0 auto;
-
-    @include for-phone() {
-        flex-wrap: wrap-reverse;
     }
 }
 
@@ -157,13 +187,22 @@ main {
     padding: 10px;
     width: 100%;
 
+    @include for-tablet() {
+        background: rgba( $color-base, .85 );
+    }
+
+    @include for-small-tablet() {
+        margin: 0;
+    }
+
     @include for-phone() {
         margin: 0;
         padding: 5px;
     }
 
     p {
-        font-size: 18px;
+        font-size: 28px;
+        font-family: $text-handwritten-paragraph;
         padding: 10px;
         text-align: center;
     }
@@ -171,13 +210,13 @@ main {
     ul#produktlista {
         margin-top: 30px;
         background-color: $color-base;
-        padding: 20px 20px 40px 20px;
+        padding: 20px 20px 30px 20px;
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
 
         h3 {
-            font-family: $text-handwritten;
+            font-family: $text-handwritten-title;
             font-size: 35px;
         }
 
@@ -218,21 +257,21 @@ main {
         text-align: center;
         padding: 20px;
         @include for-phone() {
-            background-color: #b89d74;
+            background-color: rgba($color-base, 0.7);
+            font-size: 22px;
             display: block;
             line-height: 30px;
             border: solid black 1px;
             border-radius: 5px;
-            margin-top: 20px;
-            padding: 5px;
+            margin: 15px 0;
         }
     }
 }
 
 embed {
-    width: 500px;
+    width: 374px;
     @include for-tablet() {
-        width: 200px;
+        width: 375px;
     }
     @include for-phone() {
         width: 100%;
@@ -248,7 +287,7 @@ embed {
     flex-shrink: 3;
     border: 1px solid black;
     padding: 20px;
-    min-width: 175px;
+    min-width: 165px;
 
     @include for-phone() {
         width: 100%;
