@@ -1,8 +1,7 @@
-$color-menu:rgb(210, 193, 167);
-$color-base: #fff;
-$color-background: rgb(210, 193, 167);
-$color-sidebar: #000;
-$text-handwritten-title: 'Amatic SC', cursive;
+$color-menu:rgb(210, 193, 167); /* Beige */
+$color-base: #fff; /* White */
+$color-sidebar: #000; /* Black */
+$text-handwritten-title: 'Amatic SC', cursive; /* Capitalized lettering */
 $text-handwritten-paragraph: 'Shadows Into Light', cursive;
 $text-boxy: 'Staatliches', monospace;
 
@@ -268,6 +267,8 @@ header {
     }
 }
 
+/* PDF */
+
 embed {
     width: 374px;
     @include for-tablet() {
@@ -295,6 +296,8 @@ embed {
         margin: 10px 0;
     }
 }
+
+/* INFO PARAGRAPHS */
 
 .info {
     margin-bottom: 10px;
