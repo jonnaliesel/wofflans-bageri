@@ -1,5 +1,10 @@
 $color-menu:rgb(210, 193, 167);
+$color-base: #fff;
 $color-background: rgb(210, 193, 167);
+$color-sidebar: #000;
+$text-handwritten: 'Amatic SC', cursive;
+$text-boxy: 'Staatliches', monospace;
+
 
 @mixin for-phone() {
     @media screen and (max-width: 425px) { 
@@ -23,8 +28,16 @@ $color-background: rgb(210, 193, 167);
     transition: all 0.5s ease;
 }
 
+body {
+    background-image: url("./assets/img/patrick-fore-m9qWesqRN0M-unsplash.jpg");
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 h1 {
-    font-family:'Amatic SC', cursive;
+    font-family: $text-handwritten;
     font-size: 50px;
     align-self: center;
     margin-right: 30px;
@@ -39,8 +52,8 @@ h1 {
 }
 
 h2 {
-    font-family: 'Staatliches', monospace;
-    font-size: 40px;
+    font-family: $text-boxy;
+    font-size: 50px;
     text-transform: uppercase;
     text-align: center;
     padding: 20px;
@@ -76,8 +89,8 @@ li {
 /* BANNER */
 header {
     background: $color-menu;
-    padding: 15px;
-    height: 100px;
+    padding: 20px;
+    height: 150px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -85,8 +98,7 @@ header {
 }
 
 #logo {
-    width: 170px;
-    margin-right: 20px;
+    width: 250px;
 }
 
 /* TOPPMENY */
@@ -94,6 +106,7 @@ header {
     display: flex;
     position: sticky;
     z-index: 1;
+    padding: 20px;
     background-color: $color-background;
     top: 0;
 
@@ -128,6 +141,8 @@ header {
 main {
     padding: 10px 0;
     display: flex;
+    width: 75%;
+    margin: 0 auto;
 
     @include for-phone() {
         flex-wrap: wrap-reverse;
@@ -137,7 +152,7 @@ main {
 /* HUVUDINNEHÅLL */
 .content {
     flex-wrap: wrap;
-    background: rgb(204, 204, 204);
+    background: rgba( $color-base, .7 );
     margin-left: 10px;
     padding: 10px;
     width: 100%;
@@ -148,15 +163,23 @@ main {
     }
 
     p {
-        font-size: 14px;
+        font-size: 18px;
         padding: 10px;
         text-align: center;
     }
 
     ul#produktlista {
+        margin-top: 30px;
+        background-color: $color-base;
+        padding: 20px 20px 40px 20px;
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
+
+        h3 {
+            font-family: $text-handwritten;
+            font-size: 35px;
+        }
 
         li {
             flex-direction: column;
@@ -165,7 +188,7 @@ main {
     }
 
     .produktbild {
-        width: 300px;
+        width: 220px;
         margin: 10px;
 
         @include for-tablet() {
@@ -217,14 +240,14 @@ embed {
 }
 
 #sidebar {
-    background: rgb(146, 133, 115);
-    font-size: 12px;
+    background: rgba($color-sidebar, 0.7);
+    font-size: 16px;
     color: white;
     flex-direction: column;
     justify-content: flex-start;
     flex-shrink: 3;
     border: 1px solid black;
-    padding: 12px;
+    padding: 20px;
     min-width: 175px;
 
     @include for-phone() {
@@ -242,13 +265,10 @@ embed {
     }
 }
 
-#info-icon {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
 footer {
+    padding: 16px;
+    background-color: $color-sidebar;
+    color: $color-base;
     font-weight: lighter;
     font-size: 8pt;
     text-align: center;

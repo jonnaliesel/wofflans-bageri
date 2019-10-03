@@ -10,8 +10,16 @@
   transition: all 0.5s ease;
 }
 
+body {
+  background-image: url("./assets/img/patrick-fore-m9qWesqRN0M-unsplash.jpg");
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 h1 {
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   font-size: 50px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -32,8 +40,8 @@ h1 {
 }
 
 h2 {
-  font-family: 'Staatliches', monospace;
-  font-size: 40px;
+  font-family: "Staatliches", monospace;
+  font-size: 50px;
   text-transform: uppercase;
   text-align: center;
   padding: 20px;
@@ -75,8 +83,8 @@ li {
 /* BANNER */
 header {
   background: #d2c1a7;
-  padding: 15px;
-  height: 100px;
+  padding: 20px;
+  height: 150px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,8 +97,7 @@ header {
 }
 
 #logo {
-  width: 170px;
-  margin-right: 20px;
+  width: 250px;
 }
 
 /* TOPPMENY */
@@ -101,6 +108,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   z-index: 1;
+  padding: 20px;
   background-color: #d2c1a7;
   top: 0;
 }
@@ -146,6 +154,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 75%;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 425px) {
@@ -159,7 +169,7 @@ main {
 .content {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: #cccccc;
+  background: rgba(255, 255, 255, 0.7);
   margin-left: 10px;
   padding: 10px;
   width: 100%;
@@ -173,18 +183,26 @@ main {
 }
 
 .content p {
-  font-size: 14px;
+  font-size: 18px;
   padding: 10px;
   text-align: center;
 }
 
 .content ul#produktlista {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px 20px 40px 20px;
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.content ul#produktlista h3 {
+  font-family: "Amatic SC", cursive;
+  font-size: 35px;
 }
 
 .content ul#produktlista li {
@@ -196,7 +214,7 @@ main {
 }
 
 .content .produktbild {
-  width: 300px;
+  width: 220px;
   margin: 10px;
 }
 
@@ -269,8 +287,8 @@ embed {
 }
 
 #sidebar {
-  background: #928573;
-  font-size: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 16px;
   color: white;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -282,7 +300,7 @@ embed {
   -ms-flex-negative: 3;
       flex-shrink: 3;
   border: 1px solid black;
-  padding: 12px;
+  padding: 20px;
   min-width: 175px;
 }
 
@@ -302,17 +320,10 @@ embed {
   margin-bottom: 0;
 }
 
-#info-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 10px;
-}
-
 footer {
+  padding: 16px;
+  background-color: #000;
+  color: #fff;
   font-weight: lighter;
   font-size: 8pt;
   text-align: center;
