@@ -19,39 +19,44 @@
 
 <nav class="navbar" role="navigation">
     <ul>
-        <li><a href="#sidebar" aria-label="snabbinfo">Snabbinfo</a></li>
-        <li><a href="#footer" aria-label="kontakt">Kontakt</a></li>
+        <li><a href="#sidebar" aria-label="snabbinfo" tabindex="1">Snabbinfo</a></li>
+        <li><a href="#footer" aria-label="kontakt" tabindex="2">Kontakt</a></li>
     </ul>
 </nav>
 
 <main>
     <aside id="sidebar" role="complementary">
-            <p class="info"><strong>Wofflans stenugnsbageri</strong> <br />
-                Startades 2018 av familjen Fleischanderl
-            </p>
-            <p class="info"><strong>Pappa Wofflan</strong> <br />
-                Är bagaren i familjen och hans 
-                största passion är stenugnsbakat surdegsbröd.
-            </p>
-            <p class="info"><strong>Mamma Cattis</strong> <br />
-                Driver familjens första enhet <em>Söderbergs Bageri</em> 
-                i Telefonplan. Ett gammalt bageri med anor från 1939, vill du göra
-                en nostalgisk tidsresa och hitta klassiska svenska bakverk
-                rekommenderar jag dig att åka dit. 
-            </p>
-            <p class="info"><strong>Dottern Jonna</strong> <br />
-                Är baristan i familjen och tar hand om den kromade 
-                espressomaskinen som sin lilla bebis.
-            </p>
-            <p class="info"><strong>Sonen Felix</strong> <br />
-                Driver familjens senaste enhet <em>STHLM Bread Truck</em> 
-                som åker runt i Stockholms söderförorter och säljer bröd och fika. 
-            </p>
+        <h4>Wofflans stenugnsbageri</h4>    
+        <p class="info">
+            Startades 2018 av familjen Fleischanderl
+        </p>
+        <h4>Pappa Wofflan</h4>
+        <p class="info">
+            Är bagaren i familjen och hans 
+            största passion är stenugnsbakat surdegsbröd.
+        </p>
+        <h4>Mamma Cattis</h4>
+        <p class="info">
+            Driver familjens första enhet <em>Söderbergs Bageri</em> 
+            i Telefonplan. Ett gammalt bageri med anor från 1939, vill du göra
+            en nostalgisk tidsresa och hitta klassiska svenska bakverk
+            rekommenderar jag dig att åka dit. 
+        </p>
+        <h4>Dottern Jonna</h4>
+        <p class="info">
+            Är baristan i familjen och tar hand om den kromade 
+            espressomaskinen som sin lilla bebis.
+        </p>
+        <h4>Sonen Felix</h4>
+        <p class="info">
+            Driver familjens senaste enhet <em>STHLM Bread Truck</em> 
+            som åker runt i Stockholms söderförorter och säljer bröd och fika. 
+        </p>
 
-            <video width="100%" controls aria-label="bagaren penslar hamburgerbröd med smält smör">
-                <source src="video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+        <video controls title="bagaren penslar hamburgerbröd med smält smör" tabindex="9">
+            <source src="./assets/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
 
     </aside>
 
@@ -63,16 +68,16 @@
 
         <ul id="produktlista" role="list" aria-label="sortimentslista">
             <li>
-                <img class="produktbild" src="./assets/img/valnotsbrod.jpg" alt="stenugnsbakat bröd" />
+                <img class="produktbild" src="./assets/img/valnotsbrod.jpg" alt="stenugnsbakat bröd" tabindex="4"/>
                 <h3>Bröd</h3>
             </li>
                 
             <li>
-                <img class="produktbild" src="./assets/img/nottoska.jpg" alt="hembakat fika" />
+                <img class="produktbild" src="./assets/img/nottoska.jpg" alt="hembakat fika" tabindex="5"/>
                 <h3>Fika</h3>
             </li>
             <li>
-                <img class="produktbild" src="./assets/img/smorgas.jpg" alt="smörgåsar med olika pålägg" />
+                <img class="produktbild" src="./assets/img/smorgas.jpg" alt="smörgåsar med olika pålägg" tabindex="6"/>
                 <h3>Smörgåsar</h3>
             </li>
         </ul>
@@ -84,11 +89,11 @@
         </h2>
 
         <section id="recept">
-            <embed src="./assets/chokladbollar.pdf" />
+            <embed src="./assets/chokladbollar.pdf" title="recept på chokladbollar" tabindex="7" />
         
             <a 
                 href="./assets/chokladbollar.pdf" download="Wofflans chokladbollar" 
-                aria-label="ladda ner vårt recept på chokladbollar som pdf">
+                aria-label="recept på chokladbollar" tabindex="8">
                 Ladda ner receptet
             </a>
         </section>

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* Beige */
+/* White */
+/* Black */
+/* Capitalized lettering */
 /* GENERAL */
 * {
   margin: 0;
@@ -319,6 +323,7 @@ header {
   }
 }
 
+/* PDF */
 embed {
   width: 374px;
 }
@@ -361,12 +366,17 @@ embed {
   }
 }
 
+/* INFO PARAGRAPHS */
 .info {
   margin-bottom: 10px;
 }
 
 .info:nth-last-child(1) {
   margin-bottom: 0;
+}
+
+video {
+  width: 100%;
 }
 
 footer {
